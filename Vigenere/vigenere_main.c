@@ -11,17 +11,18 @@ int main(){
     printf("%s", "Введите пароль (A-Z):\n");
     char key[255];
     scanf_s("%254s", key, 255);
-    printf("%s", key);
+    printf("%s\n", key);
 
     printf("%s", "Введите текст для шифрования (A-Z):\n");
     char txt[255];
     scanf_s("%254s", txt, 255);
-    printf("%s", txt);
+    printf("%s\n", txt);
 
-    //char result[255];
-    encrypt(key, strlen(key), txt, strlen(txt));//, result);
-    printf("%s", txt);
+    encrypt(key, strlen(key), txt, strlen(txt));
+    printf("Зашифровано: %s\n", txt);
 
+    decrypt(key, strlen(key), txt, strlen(txt));
+    printf("Расшифровано: %s\n", txt);
 
     return 0;
 }
