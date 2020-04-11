@@ -10,10 +10,6 @@ int mod_add(int x, int y, int p) {
 		return y - (p - x);
 }
 
-int mod_sub(int x, int y, int p) {
-	return mod_add(x, p - y, p);
-}
-
 int mod_mul(int x, int y, int p) {
 	int x1, x2;
 	int y1, y2;
